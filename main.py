@@ -23,10 +23,10 @@ async def on_ready():
         "id": message.id
       }
       quotes.append(message_info)
-  test.start()
+  daily_random_quote.start()
 
 @tasks.loop(minutes=1) # Loop every minute
-async def test():
+async def daily_random_quote():
     channel = client.get_channel({ID_OF_THE_CHANNEL}) # You can get the id from a channel with just a right-lick on a channel in the discord application
     for _ in range(60*60*24): # Loop for the whole day
       now = datetime.strftime(datetime.now(),'%H:%M')
