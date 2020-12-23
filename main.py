@@ -24,6 +24,13 @@ flame_list = [
   "<:Wutcat:718871884233572462>",
   "<:KEKW:738140337175789608>",
 ]
+help_command = """
+Command available :
+- !quote (Give a random quote) 
+- !help (Get a list of available commnand)
+- !rank (Get a ranking of user from their pinned message)
+- !show <username> (Get a list of quote of the username given)
+"""
 send_time = {ENTER_SPECIFIC_TIME} # Specific time when you want your bot to send a message example : 07:00
 
 @client.event
@@ -82,7 +89,7 @@ async def on_message(message):
         message_quote = "`" + "\""+ quotes[random_index]["content"] + "\"" + " - " + quotes[random_index]["author"] + "`"
         await message.channel.send(message_quote)
       elif command == "help":
-        await message.channel.send("Command available : \n - !quote (Give a random quote) \n - !help (Get a list of available commnand) ")
+        await message.channel.send(help_command)
       elif command == "stab":
         await message.channel.send("Oi there mate a bit rude to put that knife in me chest innit ye")
       elif command.startswith("show"):
