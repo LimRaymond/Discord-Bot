@@ -197,5 +197,4 @@ def get_number_of_quote_by_username():
     ranked_username_str += "- " + key + ": " + str(value) + "\n"
   return ranked_username_str
 
-keep_alive()
 bot.run(os.getenv('TOKEN'))
