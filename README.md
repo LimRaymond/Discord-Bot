@@ -16,10 +16,12 @@ Nothing to say about the projet. My bot is running thanks to repl.it. I had to c
 ### Command
 
 ```
-!quote # Give you a random pinned message
-!show <username> # Give you all pinned message from a specific user
-!rank # Give you the number of pinned message from all user that got a pinned message
-!help # Give you a list of all command
+  !quote                    Get a random quote
+  !help                     Get a list of available commnand
+  !rank                     Get a ranking of user from their pinned message
+  !show <username> <index>  Get a list of quote of the username given
+  !random <nb1> <nb2>       Get a random number from a range (default: range 0 to 100)
+  !choose <*args>           Make a choice between multiple choices
 ```
 
 ## Built With
